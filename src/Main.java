@@ -1,5 +1,4 @@
-import GUI.frame;
-import APIcon.Post;
+import GUI.FrameGUI;
 
 public class Main {
 
@@ -8,7 +7,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        new Post(true);
-        //new frame();
+        //new Post(true);
+        new FrameGUI(true);
     }
 }

@@ -8,11 +8,35 @@ import java.util.*;
 
 public class Post {
 
+    Titles titleList;
+
     public Post(){}
 
     public Post(boolean b)
     {
         if(b){ parseJSON(); }
+    }
+
+    public Titles getTitleList()
+    {
+        return this.titleList;
+    }
+
+    public String[] getAdded() throws IOException
+    {
+        String fp = "../Nyaa-Magnet-Links/bin/titles.md";
+        BufferedReader br = new BufferedReader(new FileReader(fp));
+
+        String[] addedTitles = new String[20];
+        String title;
+
+        int i=0;
+        while((title = br.readLine()) != null)
+        {
+            addedTitles[i++] = title;
+        }
+
+        return addedTitles;
     }
 
     public void parseJSON() throws NullPointerException{
@@ -27,18 +51,23 @@ public class Post {
 
             // A JSON array. JSONObject supports java.util.List interface.
             JSONArray mediaList = (JSONArray) media.get("media");
+            JSONObject pageInfo = (JSONObject) media.get("pageInfo");
 
             // An iterator over a collection. Iterator takes the place of Enumeration in the Java Collections Framework.
             // Iterators differ from enumerations in two ways:
             // 1. Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
             // 2. Method names have been improved.
             Iterator<JSONObject> iterator = mediaList.iterator();
+            long perPage = (long) pageInfo.get("total");
+
+            this.titleList = new Titles((int) perPage);
+
             while (iterator.hasNext()) {
                 JSONObject show = iterator.next();
-                System.out.println(show);
                 JSONObject title = (JSONObject) show.get("title");
                 String romajiTitle = (String) title.get("romaji");
-                System.out.println(romajiTitle);
+
+                titleList.add(romajiTitle);
             }
         } catch (Exception e) {
             e.printStackTrace();
