@@ -6,8 +6,7 @@ public class WatchingTab extends JPanel {
 
     public WatchingTab()
     {
-        FrameGUI var = new FrameGUI();
-        setLayout(var.gridLayout);
+        setLayout(new FrameGUI().gridLayout);
 
         //add elements to watching tab here
     }

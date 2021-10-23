@@ -1,12 +1,14 @@
 package APIcon;
 
 import java.io.*;
+import java.util.Locale;
 
 public class Titles implements TitleList{
 
     private String[] titles;
     private int finalEIndex;
-    private int size;
+    private final int size;
+    public boolean partAlert;
 
     public Titles()
     {
@@ -29,14 +31,55 @@ public class Titles implements TitleList{
         this.finalEIndex = 0;
     }
 
+    public boolean getPartAlert()
+    {
+        return partAlert;
+    }
+
+    protected final String fp = "../Nyaa-Magnet-Links/bin/titles.md";
+
     public void addToFile(String title) throws IOException
     {
-        // "../Nyaa-Magnet-Links/bin/titles.md" <-- needed fp
-        String fp = "../Nyaa-Magnet-Links/bin/titles.md";
         FileWriter fw = new FileWriter(fp, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(title + "\n");
+        bw.write(simplifyTitle(title) + "\n");
         bw.close();
+    }
+
+    public void rmFile(String title) throws IOException
+    {
+        FileWriter fw = new FileWriter(fp, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        //remove title from file
+        bw.close();
+
+    }
+
+    public String simplifyTitle(String title)
+    {
+        String[] retA = new String[2];
+        String ret = title.toLowerCase(Locale.ROOT);
+        this.partAlert = false;
+
+        if(ret.contains(":"))
+        {
+            retA = ret.split(":");
+            ret = ret.split(":")[0];
+        }
+
+        ret = ret.replaceAll("[0-9]", "");
+        ret = ret.replace(".", " ");
+
+        if(ret.equals(""))
+        {
+            ret = simplifyTitle(retA[1]);
+        }
+
+        //remove part if user confirmed it's not necessary
+
+        if(ret.contains("part")) partAlert = true;
+
+        return ret.trim();
     }
 
     @Override
