@@ -48,11 +48,22 @@ public class Titles implements TitleList{
 
     public void rmFile(String title) throws IOException
     {
-        FileWriter fw = new FileWriter(fp, true);
+        FileReader fr = new FileReader(fp);
+        FileWriter fw = new FileWriter(fp);
+        BufferedReader br = new BufferedReader(fr);
         BufferedWriter bw = new BufferedWriter(fw);
         //remove title from file
-        bw.close();
+        String t;
+        StringBuilder str = new StringBuilder();
+        while((t=br.readLine()) != null){
+            if(t.equals(title)) continue;
+            System.out.println(t);
+            str.append(t).append("\n");
+        }
 
+        bw.write(str.toString());
+        bw.close();
+        br.close();
     }
 
     public String simplifyTitle(String title)
