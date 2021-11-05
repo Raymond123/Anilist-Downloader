@@ -29,7 +29,6 @@ public class AiringTab extends JPanel{
         {
             JButton addButton = new JButton(titleList.getList()[i]);
             this.actionListener = new ActionListener() {
-
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JButton but = (JButton) e.getSource();

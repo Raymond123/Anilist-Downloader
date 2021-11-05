@@ -37,7 +37,7 @@ public class FrameGUI extends JFrame {
         this.gridLayout.setRows(this.titleList.getSize());
 
         this.airingScrollPane = new JScrollPane(new AiringTab(this.titleList), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        JScrollPane watchingScrollPane = new JScrollPane(new WatchingTab(), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane watchingScrollPane = new JScrollPane(new WatchingTab(this.titleList), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.add(airingScrollPane, "Airing");
