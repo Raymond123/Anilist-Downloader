@@ -2,12 +2,15 @@ package GUI;
 
 import APIcon.Post;
 import APIcon.Titles;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class AiringTab extends JPanel{
@@ -26,7 +29,6 @@ public class AiringTab extends JPanel{
         {
             JButton addButton = new JButton(titleList.getList()[i]);
             this.actionListener = new ActionListener() {
-
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JButton but = (JButton) e.getSource();
@@ -36,7 +38,7 @@ public class AiringTab extends JPanel{
                     {
                         but.setOpaque(false);
                         try {
-                            titleList.rmFile(addButton.getText());
+                            titleList.rmFile(titleList.simplifyTitle(addButton.getText()));
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
@@ -67,8 +69,24 @@ public class AiringTab extends JPanel{
                             if(n==JOptionPane.YES_OPTION)
                             {
                                 //remove part from title list && REMEMBER that part shouldnt be in that title
+                                try {
+                                    String ttl = titleList.simplifyTitle(but.getText());
+                                    titleList.rmFile(ttl);
+                                    titleList.addToFile(ttl.replaceAll("part", ""));
+
+                                    JSONObject partTrue = new JSONObject();
+                                    partTrue.put(true, ttl.replaceAll("part", ""));
+
+                                    FileWriter fw = new FileWriter("lib/partList.json", true);
+                                    BufferedWriter bfw = new BufferedWriter(fw);
+                                    bfw.write(partTrue.toJSONString());
+                                    bfw.close();
+                                    System.out.println(partTrue.toJSONString());
+                                } catch (IOException ex) {
+                                    ex.printStackTrace();
+                                }
                             }
-                        }
+                        }*/
                     }
                 }
             };
@@ -76,7 +94,7 @@ public class AiringTab extends JPanel{
             try {
                 String[] added = getAdd();
                 this.cont = Arrays.asList(added).contains(titleList.simplifyTitle(addButton.getText()));
-                System.out.println(cont + ": " + titleList.simplifyTitle(addButton.getText()));
+                //System.out.println(cont + ": " + titleList.simplifyTitle(addButton.getText()));
 
                 if (cont) {
                     addButton.setBackground(Color.blue);

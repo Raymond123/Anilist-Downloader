@@ -49,18 +49,17 @@ public class Titles implements TitleList{
     public void rmFile(String title) throws IOException
     {
         FileReader fr = new FileReader(fp);
-        FileWriter fw = new FileWriter(fp);
         BufferedReader br = new BufferedReader(fr);
-        BufferedWriter bw = new BufferedWriter(fw);
         //remove title from file
         String t;
         StringBuilder str = new StringBuilder();
         while((t=br.readLine()) != null){
             if(t.equals(title)) continue;
-            System.out.println(t);
             str.append(t).append("\n");
         }
 
+        FileWriter fw = new FileWriter(fp);
+        BufferedWriter bw = new BufferedWriter(fw);
         bw.write(str.toString());
         bw.close();
         br.close();
@@ -87,9 +86,7 @@ public class Titles implements TitleList{
         }
 
         //remove part if user confirmed it's not necessary
-
-        if(ret.contains("part")) partAlert = true;
-
+        ret = ret.replaceAll(" part ", "");
         return ret.trim();
     }
 
