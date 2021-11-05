@@ -94,7 +94,7 @@ public class AiringTab extends JPanel{
             try {
                 String[] added = getAdd();
                 this.cont = Arrays.asList(added).contains(titleList.simplifyTitle(addButton.getText()));
-                System.out.println(cont + ": " + titleList.simplifyTitle(addButton.getText()));
+                //System.out.println(cont + ": " + titleList.simplifyTitle(addButton.getText()));
 
                 if (cont) {
                     addButton.setBackground(Color.blue);
