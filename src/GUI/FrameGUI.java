@@ -6,6 +6,7 @@ import org.junit.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 import static org.junit.Assert.*;
@@ -52,11 +53,31 @@ public class FrameGUI extends JFrame {
         JMenu menu = new JMenu("Options");
         JMenuItem linkMenu = new JMenuItem("Get Links");
         linkMenu.addActionListener(e->{
-            JOptionPane.showMessageDialog(this, "clicked");
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/main.py");
+            processBuilder.redirectErrorStream(true);
+            int exit;
+            try {
+                Process p = processBuilder.start();
+                if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
+            } catch (IOException | InterruptedException ex) {
+                ex.printStackTrace();
+            }
         });
         JMenuItem reloadMenu = new JMenuItem("Refresh");
         reloadMenu.addActionListener(e-> {
-            JOptionPane.showMessageDialog(this, "clicked");
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/API/ApiCon.py");
+            processBuilder.redirectErrorStream(true);
+            int exit;
+            try {
+                Process p = processBuilder.start();
+                if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
+                else{
+                    dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+                    new FrameGUI();
+                }
+            } catch (IOException | InterruptedException ex) {
+                ex.printStackTrace();
+            }
         });
         menu.add(linkMenu);
         menu.add(reloadMenu);

@@ -36,7 +36,7 @@ public class Titles implements TitleList{
         return partAlert;
     }
 
-    protected final String fp = "../Nyaa-Magnet-Links/bin/titles.md";
+    protected final String fp = "bin/titles.md";
 
     public void addToFile(String title) throws IOException
     {
