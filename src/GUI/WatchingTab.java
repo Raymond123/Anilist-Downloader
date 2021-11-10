@@ -128,7 +128,7 @@ public class WatchingTab extends JPanel {
 
                 Node<String> node = new TNode<>(line);
                 if(this.titles.size()>=1) {
-                    System.out.println(this.titles.getLast().getElement());
+                    //System.out.println(this.titles.getLast().getElement());
                     this.titles.getLast().setNext(node);
                 }
                 this.titles.add(node);
