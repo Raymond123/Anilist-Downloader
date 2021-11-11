@@ -6,6 +6,8 @@ import org.junit.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -14,7 +16,6 @@ public class FrameGUI extends JFrame {
     protected Titles titleList;
 
     private JPanel mainPanel;
-    JScrollPane airingScrollPane;
 
     GridLayout gridLayout = new GridLayout(50, 1, 20, 1);
 
@@ -35,17 +36,57 @@ public class FrameGUI extends JFrame {
         this.postReq = new Post(true);
         this.titleList = this.postReq.getTitleList();
         this.gridLayout.setRows(this.titleList.getSize());
-
-        this.airingScrollPane = new JScrollPane(new AiringTab(this.titleList), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        JScrollPane watchingScrollPane = new JScrollPane(new WatchingTab(this.titleList), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane airingScrollPane = new JScrollPane(
+                new AiringTab(this.titleList),
+                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane watchingScrollPane = new JScrollPane(
+                new WatchingTab(this.titleList),
+                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.add(airingScrollPane, "Airing");
         tabbedPane.add(watchingScrollPane, "Watching");
 
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Options");
+        JMenuItem linkMenu = new JMenuItem("Get Links");
+        linkMenu.addActionListener(e->{
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/main.py");
+            processBuilder.redirectErrorStream(true);
+            int exit;
+            try {
+                Process p = processBuilder.start();
+                if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
+            } catch (IOException | InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        });
+        JMenuItem reloadMenu = new JMenuItem("Refresh");
+        reloadMenu.addActionListener(e-> {
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/API/ApiCon.py");
+            processBuilder.redirectErrorStream(true);
+            int exit;
+            try {
+                Process p = processBuilder.start();
+                if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
+                else{
+                    dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+                    new FrameGUI();
+                }
+            } catch (IOException | InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        });
+        menu.add(linkMenu);
+        menu.add(reloadMenu);
+        menuBar.add(menu);
+
         this.mainPanel = new JPanel();
         this.mainPanel.setLayout(new CardLayout());
         this.mainPanel.add(tabbedPane);
+        this.setJMenuBar(menuBar);
 
     }
 

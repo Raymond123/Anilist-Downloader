@@ -1,0 +1,487 @@
+{
+    "data": {
+        "Page": {
+            "media": [
+                {
+                    "episodes": null,
+                    "id": 87502,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634907600,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": null,
+                        "romaji": "Megaton-kyuu Musashi"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 105119,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635008100,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Shikizakura",
+                        "romaji": "Shikizakura"
+                    }
+                },
+                {
+                    "episodes": 13,
+                    "id": 105931,
+                    "nextAiringEpisode": null,
+                    "title": {
+                        "english": "Blade Runner: Black Lotus",
+                        "romaji": "BLADE RUNNER: BLACK LOTUS"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 108987,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634826600,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "SAKUGAN",
+                        "romaji": "Sakugan"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 109745,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635006360,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "MUTEKING THE Dancing HERO",
+                        "romaji": "MUTEKING THE Dancing HERO"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 112716,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634745300,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Muv-Luv Alternative",
+                        "romaji": "Muv-Luv Alternative"
+                    }
+                },
+                {
+                    "episodes": 23,
+                    "id": 113717,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634831700,
+                        "episode": 2
+                    },
+                    "title": {
+                        "english": "Ranking of Kings",
+                        "romaji": "Ousama Ranking"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 118103,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635170400,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "The Vampire Dies in No Time",
+                        "romaji": "Kyuuketsuki Sugu Shinu"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 120646,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635004800,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "My Senpai is Annoying",
+                        "romaji": "Senpai ga Uzai Kouhai no Hanashi"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 122292,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634921700,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Yuki Yuna is a Hero: The Great Mankai Chapter",
+                        "romaji": "Yuuki Yuuna wa Yuusha de Aru: Dai-Mankai no Shou"
+                    }
+                },
+                {
+                    "episodes": 13,
+                    "id": 126213,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634736600,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Banished from the Hero\u2019s Party, I Decided to Live a Quiet Life in the Countryside",
+                        "romaji": "Shin no Nakama janai to Yuusha no Party wo Oidasareta node, Henkyou de Slow Life suru Koto ni shimashita"
+                    }
+                },
+                {
+                    "episodes": 13,
+                    "id": 126790,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634907600,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Selection Project",
+                        "romaji": "SELECTION PROJECT"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 126793,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634736600,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "PuraOre! ~Pride of Orange~",
+                        "romaji": "Puraore!: PRIDE OF ORANGE"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 126897,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635080400,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "The Night Beyond the Tricornered Window",
+                        "romaji": "Sankaku Mado no Sotogawa wa Yoru"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 127400,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635006600,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "World Trigger 3rd Season",
+                        "romaji": "World Trigger 3rd Season"
+                    }
+                },
+                {
+                    "episodes": 24,
+                    "id": 127401,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634833680,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Platinum End",
+                        "romaji": "Platinum End"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 127412,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634921580,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Taisho Otome Fairy Tale",
+                        "romaji": "Taishou Otome Otogibanashi"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 127720,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635087600,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Mushoku Tensei: Jobless Reincarnation Part 2",
+                        "romaji": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2"
+                    }
+                },
+                {
+                    "episodes": 13,
+                    "id": 128827,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635174000,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Cardfight!! Vanguard overDress Season 2",
+                        "romaji": "Cardfight!! Vanguard: overDress Season 2"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 129068,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635181200,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "The Fruit of Evolution: Before I Knew It, My Life Had It Made",
+                        "romaji": "Shinka no Mi: Shiranai Uchi ni Kachigumi Jinsei"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 129874,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635084900,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Demon Slayer: Kimetsu no Yaiba 2",
+                        "romaji": "Kimetsu no Yaiba 2"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 129898,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634738400,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+                        "romaji": "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru"
+                    }
+                },
+                {
+                    "episodes": 25,
+                    "id": 131005,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635179400,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "AMAIM Warrior at the Borderline",
+                        "romaji": "Kyoukai Senki"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 131019,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635093300,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Irina: The Vampire Cosmonaut",
+                        "romaji": "Tsuki to Laika to Nosferatu"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 131083,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635080400,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Mieruko-chan",
+                        "romaji": "Mieruko-chan"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 131264,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634977800,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Yashahime: Princess Half-Demon - The Second Act",
+                        "romaji": "Hanyou no Yashahime: Ni no Shou"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 131565,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635260400,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "takt op.Destiny",
+                        "romaji": "takt op.Destiny"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 131584,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634914800,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "VISUAL PRISON",
+                        "romaji": "Visual Prison"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 131586,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635001200,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "86 EIGHTY-SIX Season 2",
+                        "romaji": "86: Eighty Six Part 2"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 131878,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635170400,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "RUMBLE GARANNDOLL",
+                        "romaji": "Gyakuten Sekai no Denchi Shoujo"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 131942,
+                    "nextAiringEpisode": null,
+                    "title": {
+                        "english": "JoJo\u2019s Bizarre Adventure STONE OCEAN",
+                        "romaji": "JoJo no Kimyou na Bouken: Stone Ocean"
+                    }
+                },
+                {
+                    "episodes": 13,
+                    "id": 132071,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635084000,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Tesla Note",
+                        "romaji": "Tesla Note"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 132473,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634994000,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "The Faraway Paladin",
+                        "romaji": "Saihate no Paladin"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 132525,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635003000,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "BUILD-DIVIDE -#000000- CODE BLACK",
+                        "romaji": "Build Divide: Code Black"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 132806,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634919780,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Restaurant to Another World 2",
+                        "romaji": "Isekai Shokudou 2"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 133965,
+                    "nextAiringEpisode": {
+                        "airingAt": 1634742000,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Komi Can\u2019t Communicate",
+                        "romaji": "Komi-san wa, Komyushou desu."
+                    }
+                },
+                {
+                    "episodes": 25,
+                    "id": 134623,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635004500,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "LUPIN THE 3rd PART 6",
+                        "romaji": "Lupin III: Part VI"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 136119,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635037200,
+                        "episode": 4
+                    },
+                    "title": {
+                        "english": "Waccha PriMagi!",
+                        "romaji": "Waccha PriMagi!"
+                    }
+                },
+                {
+                    "episodes": 12,
+                    "id": 136947,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635262200,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Deep Insanity THE LOST CHILD",
+                        "romaji": "Deep Insanity: THE LOST CHILD"
+                    }
+                },
+                {
+                    "episodes": null,
+                    "id": 137309,
+                    "nextAiringEpisode": {
+                        "airingAt": 1635033600,
+                        "episode": 3
+                    },
+                    "title": {
+                        "english": "Digimon Ghost Game",
+                        "romaji": "Digimon Ghost Game"
+                    }
+                }
+            ],
+            "pageInfo": {
+                "currentPage": 1,
+                "hasNextPage": false,
+                "total": 40
+            }
+        }
+    }
+}
