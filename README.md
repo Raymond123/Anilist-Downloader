@@ -1,4 +1,4 @@
 # Anilist-Downloader
 
 JAR ver 1.0 release :
-https://www.mediafire.com/folder/ebg284j1rrtot/Anilist_Downloader_jar
+https://www.mediafire.com/file/3s2xz63620fdbtv/AnilistDownload_Build.zip/file
