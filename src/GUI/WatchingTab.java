@@ -85,7 +85,12 @@ public class WatchingTab extends JPanel {
             this.actionListener = e -> {
                 int epNum = 1;
                 JFrame linkButFrame = new JFrame();
+                JPanel jPanel = new JPanel();
                 linkButFrame.setLayout(new GridLayout());
+                JScrollPane scrollPane = new JScrollPane(
+                        jPanel,
+                        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
                 for(String link : links){
                     JButton linkBut = new JButton("episode " + epNum++);
                     linkBut.addActionListener(e1 -> {
@@ -96,11 +101,15 @@ public class WatchingTab extends JPanel {
                             uri.printStackTrace();
                         }
                     });
-                    linkButFrame.add(linkBut);
-                    linkButFrame.setSize(800, 600);
-                    linkButFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                    linkButFrame.setVisible(true);
+                    jPanel.add(linkBut);
                 }
+                jPanel.setLayout(new GridLayout(24, 1, 20, 1));
+                linkButFrame.add(scrollPane);
+                linkButFrame.setLayout(new CardLayout());
+                linkButFrame.setSize(800, 600);
+                linkButFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+                linkButFrame.setVisible(true);
+
             };
             showBut.addActionListener(this.actionListener);
             this.add(showBut);
@@ -114,7 +123,7 @@ public class WatchingTab extends JPanel {
         Stack<String> magLinks = new Stack<>();
         List<String> magLinkArr = new ArrayList<>();
 
-        FileReader fr = new FileReader("../Nyaa-Magnet-Links/bin/d-links.md");
+        FileReader fr = new FileReader("bin/d-links.md");
         BufferedReader br = new BufferedReader(fr);
 
         String line;

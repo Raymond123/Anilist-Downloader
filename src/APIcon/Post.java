@@ -24,7 +24,7 @@ public class Post {
 
     public String[] getAdded() throws IOException
     {
-        String fp = "../Nyaa-Magnet-Links/bin/titles.md";
+        String fp = "bin/titles.md";
         BufferedReader br = new BufferedReader(new FileReader(fp));
 
         String[] addedTitles = new String[20];
@@ -42,7 +42,7 @@ public class Post {
     public void parseJSON() throws NullPointerException{
         JSONParser parser = new JSONParser();
         try {
-            Object obj = parser.parse(new FileReader("../Nyaa-Magnet-Links/bin/post-result.json"));
+            Object obj = parser.parse(new FileReader("bin/post-result.json"));
 
             // A JSON object. Key value pairs are unordered. JSONObject supports java.util.Map interface.
             JSONObject jsonObject = (JSONObject) obj;

@@ -59,6 +59,9 @@ public class FrameGUI extends JFrame {
             try {
                 Process p = processBuilder.start();
                 if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
+                else{
+                    SwingUtilities.updateComponentTreeUI(this);
+                }
             } catch (IOException | InterruptedException ex) {
                 ex.printStackTrace();
             }
@@ -72,8 +75,7 @@ public class FrameGUI extends JFrame {
                 Process p = processBuilder.start();
                 if((exit = p.waitFor()) != 0) JOptionPane.showMessageDialog(this, "Exit code: " + exit);
                 else{
-                    dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
-                    new FrameGUI();
+                    SwingUtilities.updateComponentTreeUI(this);
                 }
             } catch (IOException | InterruptedException ex) {
                 ex.printStackTrace();
